@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby's Chic Shopie | Tallas pequeñas, grandes sonrisas</title>
+    <meta name="description" content="Tienda en línea de ropa y accesorios para bebés en Santiago de Cali.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== MENÚ (queda fijo arriba al bajar) ===== -->
+    <div class="barra" id="barra">
+        <div class="menu container">
+            <a href="#inicio" class="logo">Baby's Chic</a>
+
+            <input type="checkbox" id="menu">
+            <label for="menu" class="menu-label">
+                <img src="Imagenes/menu.png" class="menu-icon" alt="Abrir menú">
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#ayuda">Ayuda</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="acciones">
+                <button class="btn-usuario" id="btn-usuario">Ingresar</button>
+                <button class="btn-carrito" id="btn-carrito" aria-label="Abrir carrito">
+                    <img src="Imagenes/car.svg" alt="">
+                    <span id="contador-carrito">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ENCABEZADO ===== -->
+    <header class="header" id="inicio">
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="Imagenes/Portada.jpg" alt="Baby's Chic">
+            </div>
+            <div class="header-txt">
+                <h1>Ofertas Especiales</h1>
+                <p>Tallas pequeñas, grandes sonrisas</p>
+                <a href="#productos" class="btn-1">Ver productos</a>
+                <ul class="beneficios">
+                    <li>🚚 Envío gratis desde $150.000</li>
+                    <li>🔄 Cambios durante 15 días</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== DESTACADOS ===== -->
+    <section class="ofert container">
+        <div class="ofert-1" data-ir="chupetes">
+            <div class="ofert-img"><img src="Imagenes/Chupete Chic.jpg" alt="Chupete Chic"></div>
+            <div class="ofert-txt">
+                <h3>Chupete Chic</h3>
+                <p class="desde" data-desde="chupetes"></p>
+                <a href="#productos" class="btn-2" data-ir="chupetes">Ver chupetes</a>
+            </div>
+        </div>
+        <div class="ofert-1" data-ir="coches">
+            <div class="ofert-img"><img src="Imagenes/Coche.jpg" alt="Coche"></div>
+            <div class="ofert-txt">
+                <h3>Coche</h3>
+                <p class="desde" data-desde="coches"></p>
+                <a href="#productos" class="btn-2" data-ir="coches">Ver coches</a>
+            </div>
+        </div>
+        <div class="ofert-1" data-ir="sala">
+            <div class="ofert-img"><img src="Imagenes/Juego.jpg" alt="Sala de juego"></div>
+            <div class="ofert-txt">
+                <h3>Sala de juego</h3>
+                <p class="desde" data-desde="sala"></p>
+                <a href="#productos" class="btn-2" data-ir="sala">Ver salas de juego</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CATEGORÍAS ===== -->
+    <section class="categorias container" id="categorias">
+        <h2>Categorías</h2>
+        <div class="cat-grid" id="cat-grid"></div>
+    </section>
+
+    <!-- ===== CATÁLOGO ===== -->
+    <main class="products container" id="productos">
+        <h2 id="titulo-productos">Productos</h2>
+        <div class="chips" id="chips"></div>
+
+        <div class="filtros">
+            <input type="search" id="buscar" placeholder="Buscar: tutú, chupete, baño...">
+            <select id="filtro-categoria">
+                <option value="">Todas las categorías</option>
+            </select>
+            <select id="filtro-edad">
+                <option value="">Todas las edades</option>
+                <option value="0-6">0 a 6 meses</option>
+                <option value="6-12">6 a 12 meses</option>
+                <option value="12-24">12 a 24 meses</option>
+                <option value="24-36">2 a 3 años</option>
+            </select>
+            <select id="ordenar">
+                <option value="">Ordenar</option>
+                <option value="menor">Precio: menor a mayor</option>
+                <option value="mayor">Precio: mayor a menor</option>
+            </select>
+        </div>
+
+        <p class="resultado" id="resultado"></p>
+        <div class="product-content" id="lista-productos"></div>
+        <button class="btn-1 ver-mas" id="ver-mas">Ver más productos</button>
+    </main>
+
+    <!-- ===== SERVICIOS ===== -->
+    <section class="icons container" id="servicios">
+        <div class="icons-1">
+            <div class="icon-img"><img src="Imagenes/Icon.1.svg" alt=""></div>
+            <div class="icon-txt">
+                <h3>Envíos en Cali</h3>
+                <p>Entrega a domicilio en el área metropolitana</p>
+            </div>
+        </div>
+        <div class="icons-1">
+            <div class="icon-img"><img src="Imagenes/icon.2.svg" alt=""></div>
+            <div class="icon-txt">
+                <h3>Paga a tu gusto</h3>
+                <p>Tarjeta, PSE, Nequi o contraentrega</p>
+            </div>
+        </div>
+        <div class="icons-1">
+            <div class="icon-img"><img src="Imagenes/icon.3.svg" alt=""></div>
+            <div class="icon-txt">
+                <h3>Cambios fáciles</h3>
+                <p>Tienes 15 días para cambiar tu talla</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog container">
+        <div class="blog-1" data-ir="accesorios">
+            <img src="Imagenes/b.1.jpg" alt="Accesorios">
+            <h3>Sección accesorios</h3>
+            <p>Gorros, baletas y moñitos a tu gusto</p>
+            <span class="ver-link">Ver accesorios →</span>
+        </div>
+        <div class="blog-1" data-ir="bano">
+            <img src="Imagenes/b.2.jpg" alt="Baño">
+            <h3>Sección baño</h3>
+            <p>Dale un baño a tu pequeña con estilo</p>
+            <span class="ver-link">Ver baño y cuidado →</span>
+        </div>
+        <div class="blog-1" data-ir="comedor">
+            <img src="Imagenes/b.3.jpg" alt="Comedor">
+            <h3>Sección comedor</h3>
+            <p>Que tu pequeña coma con estilo</p>
+            <span class="ver-link">Ver comedor →</span>
+        </div>
+    </section>
+
+    <!-- ===== AYUDA: PREGUNTAS FRECUENTES Y POLÍTICAS ===== -->
+    <section class="ayuda container" id="ayuda">
+        <h2>Preguntas frecuentes</h2>
+        <div id="lista-faq"></div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="contacto container" id="contacto">
+        <h2>Contáctanos</h2>
+        <form id="form-contacto" class="formulario">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="correo" placeholder="Tu correo" required>
+            <textarea name="mensaje" rows="4" placeholder="¿En qué te podemos ayudar?" required></textarea>
+            <button type="submit" class="btn-1">Enviar mensaje</button>
+        </form>
+        <p class="o-whatsapp">o escríbenos por <a href="https://wa.me/573000000000" target="_blank" rel="noopener">WhatsApp</a></p>
+    </section>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Baby's Chic</h3>
+                <p>Tallas pequeñas, grandes sonrisas</p>
+                <p>Santiago de Cali, Valle del Cauca</p>
+            </div>
+            <div class="link">
+                <h3>Tienda</h3>
+                <ul>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#" id="link-pedidos">Mis pedidos</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="#ayuda" data-faq="0">Envíos</a></li>
+                    <li><a href="#ayuda" data-faq="1">Cambios y devoluciones</a></li>
+                    <li><a href="#ayuda" data-faq="3">Guía de tallas</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>WhatsApp: 300 000 0000</li>
+                    <li>contacto@babyschic.com</li>
+                    <li>Lun a Sáb, 8 a.m. a 6 p.m.</li>
+                </ul>
+            </div>
+        </div>
+        <p class="copy">© 2026 Baby's Chic Shopie · Proyecto académico, Instituto Politécnico Superior</p>
+    </footer>
+
+    <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+    <button class="arriba" id="arriba" aria-label="Volver arriba">↑</button>
+
+    <!-- ===== CARRITO (panel lateral) ===== -->
+    <aside class="panel" id="panel-carrito" aria-hidden="true">
+        <div class="panel-top">
+            <h3>Tu carrito</h3>
+            <button class="cerrar" data-cerrar>×</button>
+        </div>
+        <div id="items-carrito"></div>
+        <div class="panel-total">
+            <p>Subtotal: <strong id="subtotal">$0</strong></p>
+            <p class="nota" id="nota-envio"></p>
+            <p class="total">Total: <strong id="total">$0</strong></p>
+            <button class="btn-1 ancho" id="btn-pagar">Finalizar compra</button>
+            <button class="btn-link" id="vaciar-carrito">Vaciar carrito</button>
+        </div>
+    </aside>
+
+    <!-- ===== VENTANA MODAL (detalle, login, pago, pedidos) ===== -->
+    <div class="modal" id="modal" aria-hidden="true">
+        <div class="modal-caja">
+            <button class="cerrar" data-cerrar>×</button>
+            <div id="modal-contenido"></div>
+        </div>
+    </div>
+
+    <div class="fondo" id="fondo"></div>
+    <div class="aviso" id="aviso"></div>
+
+    <!-- ===== ASISTENTE DE IA ===== -->
+    <div class="chat-globo" id="chat-globo">¿Te ayudo a encontrar algo? 👋</div>
+    <button class="chat-boton" id="chat-boton" aria-label="Abrir asistente">💬</button>
+    <div class="chat" id="chat">
+        <div class="chat-top">
+            <div>
+                <strong>Chicky · Asistente</strong>
+                <small>Te ayudo a encontrar lo que buscas</small>
+            </div>
+            <button class="cerrar" id="chat-cerrar">×</button>
+        </div>
+        <div class="chat-mensajes" id="chat-mensajes"></div>
+        <div class="chat-sugerencias" id="chat-sugerencias"></div>
+        <form class="chat-form" id="chat-form">
+            <input type="text" id="chat-input" placeholder="Escribe tu pregunta..." autocomplete="off">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="productos.js"></script>
+    <script src="scrip.js"></script>
+</body>
+</html>
